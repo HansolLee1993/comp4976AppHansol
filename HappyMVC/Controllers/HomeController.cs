@@ -26,5 +26,11 @@ namespace HappyMVC.Controllers
 
             return View();
         }
+        public ActionResult Foo()
+        {
+            ViewBag.Message = "Foo page.";
+
+            return View();
+        }
     }
 }
