@@ -1,0 +1,16 @@
+﻿@model String[]
+@{
+    ViewBag.Title = "Index";
+    var files = Directory.GetFiles(Server.MapPath("~/TextFiles"));
+}
+
+<h2>Index</h2>
+
+<ul>
+    
+    @foreach (string i in Model)
+    {
+        <li>@Html.ActionLink(i, "Display", new { id = Path.GetFileNameWithoutExtension(i) })</li>
+    }
+</ul>
+
